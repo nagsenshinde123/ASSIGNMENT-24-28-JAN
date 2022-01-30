@@ -1,0 +1,191 @@
+Q.1)  Check if a year is leap year or not 
+
+     import java.util.Scanner;
+
+     public class LeapYear {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a year : ");
+		int year = sc.nextInt();
+		if((year % 400 == 0) || (year % 4 == 0) && (year % 100 != 0)) {
+			System.out.println(year+" : "+"Is a Leap year");
+		}
+		else {
+			System.out.println(year+" : "+"Is not a Leap year");
+		}
+
+	}
+
+}
+//****************************************************************************************************//
+Q.2) Find permutation and combination of numbers
+     
+     import java.util.Scanner;
+
+public class Permutation_Combination {
+	public static int factorial(int n) {
+		int fact = 1;
+		for(int i=1; i<=n; i=i+1) {
+			fact = fact *i;
+		}
+		return fact;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter value of n : ");
+		int n = sc.nextInt();
+		System.out.println("Enter value of r : ");
+		int r = sc.nextInt();
+		
+		int permutation = factorial(n) / factorial(n - r);
+		System.out.println("Permutation = "+permutation);
+		
+		int combination = factorial(n) / (factorial(r) * factorial(n - r));
+		System.out.println("Combination = "+combination);
+		
+
+	}
+
+}
+
+
+
+//****************************************************************************************************//
+Q.3)  Java Program To Calculate Distance Between Two Points
+
+     import java.util.Scanner;
+
+public class distanceOfTwoPoints {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the value of X1 : ");
+		int x1 = sc.nextInt();
+		System.out.println("Enter the value of X2 : ");
+		int x2 = sc.nextInt();
+		System.out.println("Enter the value of Y1 : ");
+		int y1 = sc.nextInt();
+		System.out.println("Enter the value of Y2 : ");
+		int y2 = sc.nextInt();
+		
+		double distance = Math.sqrt((x2-x1)*(x2-x1) +(y2-y1)*(y2-y1));
+		System.out.println("Distance Between Two points = "+distance);
+
+	}
+
+}
+//****************************************************************************************************//
+Q.4) Sum of even and odd digits
+
+     import java.util.Scanner;
+
+     public class SumOfEvenOdd {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		System.out.println("Enter a any Number : ");
+		int num = sc.nextInt();
+		int sum = 0;
+		int sum1 = 0;
+		for(int i=1; i<=num; i=i+1) {
+			if(i % 2 == 0) {
+				 sum = sum +i;
+			}
+			if(i % 2 != 0) {
+				sum1 = sum1 + i ;
+				
+			}
+			
+		}
+		System.out.println("Total sum of Even number = "+sum);
+		System.out.println("Total sum of Even number = "+sum1);
+
+	}
+//****************************************************************************************************//
+
+
+Q.5) Reverse a number
+
+     import java.util.Scanner;
+
+     public class ReverseNumber {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter any Number : ");
+		long num = sc.nextLong();
+		long rev = 0;
+		while(num != 0) {
+			long digit = num % 10;
+			rev = rev * 10 + digit;
+			num = num / 10;			
+		}
+		System.out.println("Reversed number is : "+rev);
+
+	}
+
+}
+//****************************************************************************************************//
+
+Q.6) WAP to print first x terms of the series 3N + 2 which are not multiples of 4.
+
+    import java.util.Scanner;
+
+public class ArithMeticProg {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter any number : ");
+		int num=s.nextInt();
+		int count = 0;
+		int i =1;
+		while(count<num) {
+			int AP = 3*i+2;
+			if(AP % 4 != 0) {
+				System.out.println(AP+" ");
+				count=count+1;
+			}
+			i=i+1;
+		}
+		
+		
+
+	}
+
+}
+//****************************************************************************************************//
+Q.7)  find Compound Intrest
+
+      import java.util.Scanner;
+
+public class CompoundInterest {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter principle value : ");
+		float p =sc.nextFloat(); 
+		System.out.println("Enter rate of Interest : ");
+		float r =sc.nextFloat(); 
+		System.out.println("Enter number of times interest applied time per period : ");
+		float n =sc.nextFloat(); 
+		System.out.println("number of time periods  : ");
+		float t =sc.nextFloat(); 
+		
+		double CI = p * Math.pow(1+n/r, n*t);
+		
+		System.out.println("Compound Interest = "+CI);
+		
+
+        
+
+	}
+
+}
+
+
+
+//****************************************************************************************************//
+
+
